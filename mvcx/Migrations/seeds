@@ -1,0 +1,25 @@
+
+php vendor/bin/phinx seed:create UserSeeder
+
+
+phinx schema:dump
+vendor/bin/phinx schema:dump
+
+php vendor/bin/phinx seed:run -s UserSeeder
+
+Comoo gerar um arquivo .sql exportando do banco?
+Funciona no Cake3
+
+bin/cake bake seed --data tabela
+
+Dica: se estiver usando outro framework instalar o cake3 somemnte para exportar os registros via seed
+composer create-project --prefer-dist cakephp/app:3.* appteste
+
+Basta instalar e configurar o banco e executar:
+bin/cake bake seed --data tabela
+
+Ele gera o arquivo contendo todos os registros da tabela
+
+Para exportar apenas 10 registros:
+bin/cake bake seed --data --limit 10 tabela
+

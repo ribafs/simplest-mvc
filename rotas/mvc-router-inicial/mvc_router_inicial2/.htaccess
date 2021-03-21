@@ -1,0 +1,3 @@
+# Este arquivo redireciona todas os requests para a pasta public/ e habilita o mod_rewrite
+RewriteEngine on
+RewriteRule ^(.*) public/$1 [L]

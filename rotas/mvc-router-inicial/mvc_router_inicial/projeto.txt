@@ -1,0 +1,17 @@
+Tentar criar todo com o conhecimento adquirido até agora
+
+public/index.php
+src/bootstrap.php
+src/config.php
+src/Controller
+src/Router
+src/Model
+src/View
+src/templates
+
+Vou usar namespace com psr-4 que dá menos trabalho.
+
+O Controller é chamado inicialmente pelo bootstrap
+Então ele instancia o model e chama seu index e guarda em $model
+O controller instancia a view e passa $model para seu método index que é devolvido para bootstrap
+

@@ -1,0 +1,26 @@
+# Necessário para evitar problemas ao usar um controlador chamado "index" e ter um root index.php
+# mais aqui: http://httpd.apache.org/docs/2.2/content-negotiation.html
+Options -MultiViews
+
+# Ativar a URL rewriting (como myproject.com/controller/action/1/2/3)
+RewriteEngine On
+
+# Prevenir pessoas de visualizar diretamente nos diretórios
+Options -Indexes
+
+# Se as seguintes condições forem verdadeiras, reescreva a URL:
+# Se o nome do arquivo solicitado não for um diretório,
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#e se o nome do arquivo solicitado não for um arquivo comum existente,
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# e se o requesitidado arquivo não for um link simmbólico,
+RewriteCond %{REQUEST_FILENAME} !-l
+
+# então reescreva a URL da seguinte maneira:
+# Pegue o nome do arquivo inteiro da solicitação e forneça-o como o valor de um
+# "url" parâmetro de consulta para index.php. Anexe qualquer string de consulta da
+# URL original como mais parâmetros de consulta (QSA) e pare
+# processando este arquivo .htaccess (L).
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]

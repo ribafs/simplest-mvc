@@ -1,0 +1,131 @@
+Trabalhando com foreign key
+
+Migrations com Phinx
+
+Instalação
+composer require robmorgan/phinx
+composer require symfony/yaml
+composer require fzaninotto/faker
+
+Criar as pastas
+db
+    migrations
+    seeds
+
+Criar arquivo de configuração phinx.yml
+php vendor/bin/phinx init
+
+Editar e ajustar
+phinx.yml
+
+paths:
+    migrations: '%%PHINX_CONFIG_DIR%%/db/migrations'
+    seeds: '%%PHINX_CONFIG_DIR%%/db/seeds'
+
+environments:
+    default_migration_table: phinxlog
+    default_database: development
+    production:
+        adapter: mysql
+        host: localhost
+        name: usuarios
+        user: root
+        pass: 'root'
+        port: 3306
+        charset: utf8
+
+    development:
+        adapter: mysql
+        host: localhost
+        name: banco
+        user: root
+        pass: ''
+        port: 3306
+        charset: utf8
+
+    testing:
+        adapter: mysql
+        host: localhost
+        name: testing_db
+        user: root
+        pass: ''
+        port: 3306
+        charset: utf8
+
+version_order: creation
+
+Criar as migrations: produtos e pedidos relacionadas
+CREATE TABLE produtos (
+    id int primary key auto_increment,
+    nome varchar(50) not null,
+    quantidade int
+);
+
+CREATE TABLE pedidos (
+    id int primary key auto_increment,
+    data date not null,
+    quantidade int,
+    produto_id int not null,
+    CONSTRAINT `fk-produto` FOREIGN KEY (`produto_id`) REFERENCES `produtos` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
+
+Criar migration produtos
+vendor/robmorgan/phinx/bin/phinx create Produtos
+
+Pedidos
+vendor/robmorgan/phinx/bin/phinx create Pedidos
+
+Editar
+20190529165824_produtos.php
+
+E deixar assim o change():
+
+    public function change()
+    {
+        $this->table('produtos')
+            ->addColumn('nome', 'string')
+            ->addColumn('quantidade', 'integer', [
+            'null' => false
+        ]);       
+    }
+
+Executar a migration para criar a tabela
+php vendor/robmorgan/phinx/bin/phinx migrate -e development
+
+Roolback
+Excluir as tabelass criadas
+Permanece apenas a tabela phinxlog com informações para o phinx
+
+vendor/bin/phinx rollback -e development
+
+Tipos de campos
+    • biginteger 
+    • binary 
+    • boolean 
+    • date 
+    • datetime 
+    • decimal 
+    • float 
+    • integer 
+    • string 
+    • text 
+    • time 
+    • timestamp 
+
+
+
+
+Working With Foreign Keys
+
+    public function change()
+    {
+        $refTable = $this->table('pedidos')
+            ->addColumn('data', 'date')
+            ->addColumn('quantidade', 'integer')
+            ->addColumn('produto_id', 'integer', ['null' => true])
+            ->addForeignKey('produto_id', 'produtos', 'id', ['delete'=> 'SET_NULL', 'update'=> 'NO_ACTION'])
+            ->create();
+    }
+
+

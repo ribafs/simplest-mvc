@@ -1,16 +1,12 @@
-# Simplest-mvc
+# Criação de um aplicativo em PHP com MVC do "zero"
 
-#### O aplicativo em PHP usando MVC e bons padrões e práticas mais simples que conheço e que consegui criar.
+## O exemplo mais simples que já vi.
 
-## Este repositório
+Do mínimo até algo usável para mostrar bons recursos que são utilizadoso nos grandes frameworks
 
-https://github.com/ribafs/simplest-mvc
+Em diversas fases, seguindo da inicial e seguindo em frente.
 
-## Versões
+## Licença
 
-São seis versões para chegar ao final (até agora :)):
+MIT
 
-- Primeira
-
-
-# EM BREVE
