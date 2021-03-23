@@ -10,9 +10,35 @@ Em diversas fases, seguindo da inicial e seguindo em frente.
 
 - Faça o download para seu diretório web
 - Crie um banco de dados e importe o script db.sql
-- Ajuste o Core/config.php para o banco criado e se testando a versão 12 verá algo como:
+- Ajuste o Core/config.php para o banco criado. Veja as várias fases abaixo:
 
-![](images/simplest-mvc.png)
+Fase inicial sem banco, apenas com um array
+
+![](images/zero.png)
+
+![](images/um.png)
+
+![](images/dois.png)
+
+![](images/tres.png)
+
+![](images/quatro.png)
+
+![](images/cinco.png)
+
+![](images/seis.png)
+
+![](images/sete.png)
+
+![](images/oito.png)
+
+![](images/nove.png)
+
+![](images/dez.png)
+
+![](images/onze.png)
+
+![](images/doze.png)
 
 ## Licença
 
