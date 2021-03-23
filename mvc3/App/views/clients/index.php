@@ -1,7 +1,7 @@
 <center>
 
-<h1>MVC Simples em PHP</h1>
-<h2>Sem banco de dados</h2>
+<h1>MVC Simples em PHP - 3</h1>
+<h2>Com banco de dados</h2>
 
 <p>Lista de clientes</p>
 <br>

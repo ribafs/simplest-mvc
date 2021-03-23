@@ -5,7 +5,6 @@ define('ENVIRONMENT', 'dev'); // Or 'prod'
 if (ENVIRONMENT == 'dev') {
     error_reporting(E_ALL);
     ini_set("display_errors", 1);
-    require_once 'd.php';
 }
 
 define('URL_PUBLIC_FOLDER', 'public');
@@ -16,7 +15,7 @@ define('URL', URL_PROTOCOL . URL_DOMAIN . URL_SUB_FOLDER);
 
 define('HOST', 'localhost');
 define('USER', 'root');
-define('PASS', '');
+define('PASS', 'root');
 define('DB', 'testes');
 
 define('LINKS_PER_PAGE', 5);

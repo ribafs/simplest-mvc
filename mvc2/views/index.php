@@ -1,4 +1,5 @@
-<h1>MVC Simples em PHP</h1>
+<center>
+<h1>MVC Simples em PHP - 2</h1>
 <h2>Com banco de dados</h2>
 
 <h3>Lista de clientes</h3>

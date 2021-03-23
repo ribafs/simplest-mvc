@@ -10,7 +10,7 @@ class Model
     {
         global $host, $user, $pass, $db;
         try {
-            $this->pdo = new \PDO("mysql:host=localhost;dbname=testes", 'root', ''  );
+            $this->pdo = new \PDO("mysql:host=localhost;dbname=testes", 'root', 'root');
 
             return $this->pdo;
 
