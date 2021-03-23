@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <br>
-        <h1 class="text-center">Mini MVC 9</h1>
+        <h1 class="text-center">Mini MVC 12</h1>
         <h4 class="text-center">(Com Autoload, PSR-4 e Rotas)</h4>
         <br>
         <div class="text-center">
