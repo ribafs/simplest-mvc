@@ -21,7 +21,7 @@ class Application
         } elseif (file_exists(APP . 'Controllers/' . ucfirst($this->urlController) . 'Controller.php')) {
             $controller = "\\App\\Controllers\\" . ucfirst($this->urlController) . 'Controller';
             $this->urlController = new $controller();
-
+$this->urlAction = 'index';
             if (method_exists($this->urlController, $this->urlAction) && is_callable(array($this->urlController, $this->urlAction))) {
                 
                 if (!empty($this->urlParams)) {
