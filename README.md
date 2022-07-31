@@ -14,31 +14,33 @@ Em diversas fases, seguindo da inicial e seguindo em frente.
 
 Fase inicial sem banco, apenas com um array
 
-![](images/zero.png)
+![](images/0.png)
 
-![](images/um.png)
+![](images/1.png)
 
-![](images/dois.png)
+![](images/2.png)
 
-![](images/tres.png)
+![](images/3.png)
 
-![](images/quatro.png)
+![](images/4.png)
 
-![](images/cinco.png)
+![](images/4.1.png)
 
-![](images/seis.png)
+![](images/5.png)
 
-![](images/sete.png)
+![](images/6.png)
 
-![](images/oito.png)
+![](images/7.png)
 
-![](images/nove.png)
+![](images/8.png)
 
-![](images/dez.png)
+![](images/9.png)
 
-![](images/onze.png)
+![](images/10.png)
 
-![](images/doze.png)
+![](images/11.png)
+
+![](images/12.png)
 
 ## Licença
 
