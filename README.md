@@ -6,11 +6,15 @@ Do mínimo até algo usável para mostrar bons recursos que são utilizadoso nos
 
 Em diversas fases, seguindo da inicial e seguindo em frente.
 
+## Gratidão ao Panique
+Graças ao seu projeto mini3, consegui criar este projeto.
+https://github.com/panique/mini3
+
 ## Em várias fases
 
 - Faça o download para seu diretório web
 - Crie um banco de dados e importe o script db.sql
-- Ajuste o Core/config.php para o banco criado. Veja as várias fases abaixo:
+- Ajuste o Core/config.php para o banco criado. Veja capturas das várias fases abaixo:
 
 Fase inicial sem banco, apenas com um array
 
